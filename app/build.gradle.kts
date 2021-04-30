@@ -1,7 +1,9 @@
 plugins {
     id(BuildPlugins.application)
     id(BuildPlugins.kotlinAndroid)
+    id(BuildPlugins.kapt)
     id(BuildPlugins.safeArgs)
+    id(BuildPlugins.hilt)
 }
 
 android {
@@ -23,8 +25,8 @@ android {
             isMinifyEnabled = true
 
             proguardFiles(
-                    getDefaultProguardFile("proguard-android-optimize.txt"),
-                    "proguard-rules.pro"
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
             )
         }
 
@@ -71,6 +73,10 @@ dependencies {
     //
     implementation(Libraries.retrofit)
     implementation(Libraries.converter_gson)
+
+    // Dagger Hilt
+    implementation(Libraries.hiltAndroid)
+    kapt(Libraries.hiltAndroidCompiler)
 
 
     api(Libraries.timber)
