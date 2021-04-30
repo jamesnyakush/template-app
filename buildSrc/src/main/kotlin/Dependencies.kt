@@ -34,9 +34,15 @@ object Versions {
 object BuildPlugins {
     const val gradleBuildPlugin = "com.android.tools.build:gradle:4.1.3"
     const val kotlinBuildPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.72"
+    const val safeArgsGradlePlugin =
+        "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation}"
 
     const val application = "com.android.application"
     const val kotlinAndroid = "kotlin-android"
+    const val crashlytics = "com.google.firebase.crashlytics"
+    const val safeArgs = "androidx.navigation.safeargs.kotlin"
+    const val kapt = "kotlin-kapt"
+
 }
 
 object Libraries {
@@ -45,19 +51,19 @@ object Libraries {
     const val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
     const val core = "androidx.core:core-ktx:1.2.0"
     const val constraintlayout =
-            "androidx.constraintlayout:constraintlayout:${Versions.constraintlayout}"
+        "androidx.constraintlayout:constraintlayout:${Versions.constraintlayout}"
     const val support = "androidx.legacy:legacy-support-v4:${Versions.support}"
 
     //Kotlin Coroutines
     const val coroutines_android =
-            "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutines}"
     const val coroutines_core =
-            "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
 
     // ViewModel and LiveData
     const val lifecycle_extensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
     const val lifecycle_viewmodel =
-            "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
+        "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
 
     //New Material Design
     const val material = "com.google.android.material:material:${Versions.material}"
@@ -65,10 +71,9 @@ object Libraries {
 
     //Android Navigation Architecture
     const val navigation_fragment =
-            "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+        "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
     const val navigation_ui = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
-    const val navigation_dynamic_features =
-            "androidx.navigation:navigation-dynamic-features-fragment:${Versions.navigation}"
+
 
     // Retrofit
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"

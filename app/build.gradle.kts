@@ -1,6 +1,7 @@
 plugins {
     id(BuildPlugins.application)
     id(BuildPlugins.kotlinAndroid)
+    id(BuildPlugins.safeArgs)
 }
 
 android {
@@ -31,10 +32,12 @@ android {
 
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -43,8 +46,35 @@ android {
 dependencies {
 
     implementation(Libraries.kotlin)
-    implementation(Libraries.core)
-    implementation(Libraries.appcompat)
-    implementation(Libraries.material)
-    implementation(Libraries.constraintlayout)
+    api(Libraries.appcompat)
+    api(Libraries.core)
+    api(Libraries.constraintlayout)
+    api(Libraries.support)
+
+
+    //Kotlin Coroutines
+    implementation(Libraries.coroutines_android)
+    implementation(Libraries.coroutines_core)
+
+    // ViewModel and LiveData
+    api(Libraries.lifecycle_extensions)
+    api(Libraries.lifecycle_viewmodel)
+
+    //New Material Design
+    api(Libraries.material)
+
+
+    //Android Navigation Architecture
+    api(Libraries.navigation_fragment)
+    api(Libraries.navigation_ui)
+
+    //
+    implementation(Libraries.retrofit)
+    implementation(Libraries.converter_gson)
+
+
+    api(Libraries.timber)
+
+    api(Libraries.preference)
+
 }
