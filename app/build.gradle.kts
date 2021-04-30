@@ -76,5 +76,4 @@ dependencies {
     api(Libraries.timber)
 
     api(Libraries.preference)
-
 }
