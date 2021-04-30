@@ -8,6 +8,7 @@ buildscript {
         classpath(BuildPlugins.gradleBuildPlugin)
         classpath(BuildPlugins.kotlinBuildPlugin)
         classpath(BuildPlugins.safeArgsGradlePlugin)
+        classpath(BuildPlugins.hiltBuildPlugin)
 
     }
 }

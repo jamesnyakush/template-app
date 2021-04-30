@@ -2,9 +2,12 @@ package com.jamesnyakush.template
 
 import android.app.Application
 import androidx.annotation.Nullable
+import dagger.hilt.android.HiltAndroidApp
 import org.jetbrains.annotations.NotNull
 import timber.log.Timber
 
+
+@HiltAndroidApp
 class Template : Application() {
 
     override fun onCreate() {

@@ -17,6 +17,7 @@ object Versions {
     const val timber = "4.7.1"
     const val preference = "1.1.1"
     const val okHttp = "4.10.0-RC1"
+    const val hiltVersion = "2.35.1"
 
     const val junit4 = "4.13.1"
     const val testRunner = "1.1.0"
@@ -36,9 +37,12 @@ object BuildPlugins {
     const val kotlinBuildPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.72"
     const val safeArgsGradlePlugin =
         "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation}"
+    const val hiltBuildPlugin =
+        "com.google.dagger:hilt-android-gradle-plugin:${Versions.hiltVersion}"
 
     const val application = "com.android.application"
     const val kotlinAndroid = "kotlin-android"
+    const val hilt = "dagger.hilt.android.plugin"
     const val crashlytics = "com.google.firebase.crashlytics"
     const val safeArgs = "androidx.navigation.safeargs.kotlin"
     const val kapt = "kotlin-kapt"
@@ -79,6 +83,13 @@ object Libraries {
     const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
     const val converter_gson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
 
+    // Dagger Hilt
+    const val hiltAndroid = "com.google.dagger:hilt-android:${Versions.hiltVersion}"
+    const val hiltAndroidCompiler =
+        "com.google.dagger:hilt-android-compiler:${Versions.hiltVersion}"
+//    const val hiltViewmodel = "androidx.hilt:hilt-lifecycle-viewmodel:$hiltAndroidXVersion"
+//    const val hiltCompiler = "androidx.hilt:hilt-compiler:$hiltAndroidXVersion"
+
 
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
 
@@ -86,6 +97,7 @@ object Libraries {
 
 
 }
+
 
 object AndroidSDK {
     const val minSdkVersion = 21
