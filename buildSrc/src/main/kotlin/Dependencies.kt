@@ -34,6 +34,9 @@ object Versions {
 object BuildPlugins {
     const val gradleBuildPlugin = "com.android.tools.build:gradle:4.1.3"
     const val kotlinBuildPlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.72"
+
+    const val application = "com.android.application"
+    const val kotlinAndroid = "kotlin-android"
 }
 
 object Libraries {

@@ -1,18 +1,18 @@
 plugins {
-    id("com.android.application")
-    id("kotlin-android")
+    id(BuildPlugins.application)
+    id(BuildPlugins.kotlinAndroid)
 }
 
 android {
-    compileSdkVersion(30)
+    compileSdkVersion(AndroidSDK.targetSdkVersion)
     buildToolsVersion("30.0.3")
 
     defaultConfig {
         applicationId = "com.jamesnyakush.template"
-        minSdkVersion(21)
-        targetSdkVersion(30)
-        versionCode = 1
-        versionName = "1.0"
+        minSdkVersion(AndroidSDK.minSdkVersion)
+        targetSdkVersion(AndroidSDK.targetSdkVersion)
+        versionCode = AndroidSDK.versionCode
+        versionName = AndroidSDK.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
