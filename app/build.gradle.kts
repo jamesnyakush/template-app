@@ -1,3 +1,4 @@
+
 plugins {
     id(BuildPlugins.application)
     id(BuildPlugins.kotlinAndroid)
@@ -76,6 +77,10 @@ dependencies {
 
     // Dagger Hilt
     implementation(Libraries.hiltAndroid)
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:${rootProject.extra["kotlin_version"]}")
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation("androidx.appcompat:appcompat:1.2.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
     kapt(Libraries.hiltAndroidCompiler)
 
 
